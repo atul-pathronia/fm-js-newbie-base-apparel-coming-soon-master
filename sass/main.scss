@@ -16,6 +16,30 @@ html {
   font-size: 62.5%;
 }
 
+@media (min-width: 376px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (min-width: 426px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+@media (min-width: 769px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 100%;
+  }
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
   background-image: url("/images/bg-pattern-desktop.svg");
@@ -23,6 +47,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   max-height: 100vh;
+  @media (min-width: 769px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
 }
 
 .container {
@@ -35,6 +65,13 @@ body {
   flex-direction: column;
   justify-content: center;
 
+  @media (min-width: 769px) {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 90%;
+    position: relative;
+  }
+
   &-top {
     padding: 1.5rem;
     width: max-content;
@@ -42,18 +79,45 @@ body {
     img {
       width: 75%;
     }
+
+    @media (min-width: 769px) {
+      position: absolute;
+      left: 4rem;
+      // top: 3rem;
+    }
   }
 
   &-middle {
     margin-bottom: 3rem;
-    img {
+    @media (min-width: 769px) {
+      grid-column: 2/3;
+    }
+    .mobile {
       width: 100%;
       object-fit: contain;
+      @media (min-width: 769px) {
+        display: none;
+      }
+    }
+
+    .desktop {
+      display: none;
+      @media (min-width: 769px) {
+        display: block;
+        width: 100%;
+      }
     }
   }
 
   &-last {
     text-align: center;
+    @media (min-width: 769px) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      margin-top: 5rem;
+      text-align: left;
+      padding-left: 5rem;
+    }
     &-heading {
       text-transform: uppercase;
       color: $color-neutral-dark-grayish-red;
@@ -67,6 +131,9 @@ body {
       }
 
       margin-bottom: 3rem;
+      @media (min-width: 769px) {
+        margin-top: 3rem;
+      }
     }
     &-sub-heading {
       font-size: 1.2rem;
@@ -76,6 +143,9 @@ body {
       margin: 0 auto;
       width: 90%;
       margin-bottom: 3rem;
+      @media (min-width: 769px) {
+        margin-left: 0;
+      }
     }
 
     form {
@@ -90,6 +160,9 @@ body {
         width: 90%;
         margin: 0 auto;
         overflow: hidden;
+        @media (min-width: 769px) {
+          margin-left: 0;
+        }
 
         input {
           border: none;
@@ -115,14 +188,15 @@ body {
         .error-msg {
           display: none;
           position: absolute;
-          left: 3rem;
+          left: 5%;
           bottom: -2rem;
+          color: $color-primary-soft-Red;
         }
 
         .error-image {
           display: none;
           position: absolute;
-          right: 20%;
+          right: 22%;
         }
       }
     }
