@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-image: url("/images/bg-pattern-desktop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
+
+.container {
+  max-width: 144rem;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden; }
+  .container-top {
+    padding: 1.5rem;
+    width: max-content; }
+    .container-top img {
+      width: 75%; }
+  .container-middle {
+    width: 75%;
+    margin-bottom: 5rem; }
+    .container-middle img {
+      width: 100%;
+      object-fit: contain; }
+  .container-last {
+    width: 75%;
+    text-align: center; }
+    .container-last-heading {
+      text-transform: uppercase;
+      color: #413a3a;
+      font-weight: 600;
+      font-size: 4rem;
+      line-height: 1.1;
+      letter-spacing: 0.4rem;
+      margin-bottom: 3rem; }
+      .container-last-heading span {
+        color: #ce9797;
+        font-weight: 300; }
+    .container-last-sub-heading {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #ce9797;
+      line-height: 1.4;
+      margin: 0 auto;
+      width: 90%;
+      margin-bottom: 3rem; }
+    .container-last form .form-group {
+      border: 0.2px solid #413a3a;
+      border-radius: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: 0 auto;
+      position: relative; }
+      .container-last form .form-group input {
+        border: none;
+        outline: none;
+        padding-left: 1rem; }
+        .container-last form .form-group input::placeholder {
+          color: #ce9797;
+          font-weight: 400; }
+      .container-last form .form-group button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 2rem;
+        background-color: #f96262;
+        border-radius: 2rem;
+        border: none;
+        cursor: pointer; }
+      .container-last form .form-group .error-msg {
+        display: none;
+        position: absolute;
+        left: 1rem;
+        bottom: -2rem; }
+      .container-last form .form-group .error-image {
+        display: none;
+        position: absolute;
+        right: 6rem; }

@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+$color-primary-desaturated-Red: #ce9797;
+$color-primary-soft-Red: hsl(0, 93%, 68%);
+$color-neutral-dark-grayish-red: hsl(0, 6%, 24%);
+$gradients-1: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+$gradients-2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-image: url("/images/bg-pattern-desktop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.container {
+  max-width: 144rem;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  &-top {
+    padding: 1.5rem;
+    width: max-content;
+
+    img {
+      width: 75%;
+    }
+  }
+
+  &-middle {
+    width: 75%;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    margin-bottom: 5rem;
+  }
+
+  &-last {
+    width: 75%;
+    text-align: center;
+    &-heading {
+      text-transform: uppercase;
+      color: $color-neutral-dark-grayish-red;
+      font-weight: 600;
+      font-size: 4rem;
+      line-height: 1.1;
+      letter-spacing: 0.4rem;
+      span {
+        color: $color-primary-desaturated-Red;
+        font-weight: 300;
+      }
+
+      margin-bottom: 3rem;
+    }
+    &-sub-heading {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $color-primary-desaturated-Red;
+      line-height: 1.4;
+      margin: 0 auto;
+      width: 90%;
+      margin-bottom: 3rem;
+    }
+
+    form {
+      .form-group {
+        border: 0.2px solid $color-neutral-dark-grayish-red;
+        border-radius: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+
+        input {
+          border: none;
+          outline: none;
+          padding-left: 1rem;
+          &::placeholder {
+            color: $color-primary-desaturated-Red;
+            font-weight: 400;
+          }
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1rem 2rem;
+          background-color: $color-primary-soft-Red;
+          border-radius: 2rem;
+          border: none;
+          cursor: pointer;
+        }
+
+        .error-msg {
+          display: none;
+          position: absolute;
+          left: 1rem;
+          bottom: -2rem;
+        }
+
+        .error-image {
+          display: none;
+          position: absolute;
+          right: 6rem;
+        }
+      }
+    }
+  }
+}
