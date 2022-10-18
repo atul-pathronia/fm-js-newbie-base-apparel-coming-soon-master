@@ -168,6 +168,8 @@ body {
           border: none;
           outline: none;
           padding-left: 1rem;
+          width: 100%;
+          font-size: 1.2rem;
           &::placeholder {
             color: $color-primary-desaturated-Red;
             font-weight: 400;
@@ -183,6 +185,9 @@ body {
           border-radius: 2rem;
           border: none;
           cursor: pointer;
+          &:hover {
+            background-color: rgba($color-primary-soft-Red, $alpha: 0.9);
+          }
         }
 
         .error-msg {

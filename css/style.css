@@ -130,7 +130,9 @@ body {
         .container-last form .form-group input {
           border: none;
           outline: none;
-          padding-left: 1rem; }
+          padding-left: 1rem;
+          width: 100%;
+          font-size: 1.2rem; }
           .container-last form .form-group input::placeholder {
             color: #ce9797;
             font-weight: 400; }
@@ -143,6 +145,8 @@ body {
           border-radius: 2rem;
           border: none;
           cursor: pointer; }
+          .container-last form .form-group button:hover {
+            background-color: rgba(249, 98, 98, 0.9); }
         .container-last form .form-group .error-msg {
           display: none;
           position: absolute;
