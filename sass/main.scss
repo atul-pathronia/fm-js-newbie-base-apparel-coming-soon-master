@@ -22,14 +22,18 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  max-height: 100vh;
 }
 
 .container {
   max-width: 144rem;
   width: 100%;
+  max-height: 100vh;
   margin: 0 auto;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &-top {
     padding: 1.5rem;
@@ -41,17 +45,14 @@ body {
   }
 
   &-middle {
-    width: 75%;
+    margin-bottom: 3rem;
     img {
       width: 100%;
       object-fit: contain;
     }
-
-    margin-bottom: 5rem;
   }
 
   &-last {
-    width: 75%;
     text-align: center;
     &-heading {
       text-transform: uppercase;
@@ -78,6 +79,8 @@ body {
     }
 
     form {
+      position: relative;
+      margin-bottom: 3rem;
       .form-group {
         border: 0.2px solid $color-neutral-dark-grayish-red;
         border-radius: 2rem;
@@ -86,7 +89,7 @@ body {
         justify-content: space-between;
         width: 90%;
         margin: 0 auto;
-        position: relative;
+        overflow: hidden;
 
         input {
           border: none;
@@ -112,14 +115,14 @@ body {
         .error-msg {
           display: none;
           position: absolute;
-          left: 1rem;
+          left: 3rem;
           bottom: -2rem;
         }
 
         .error-image {
           display: none;
           position: absolute;
-          right: 6rem;
+          right: 20%;
         }
       }
     }
